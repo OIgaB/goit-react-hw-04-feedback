@@ -3,12 +3,7 @@ import PropTypes from 'prop-types';
 import { List, Item, Property, Numbers } from "./styled";
 
 
-// export class Statistics extends Component {                             // для класів
-//     render() {
-//         const { options, total, positivePercentage } = this.props;
-
-
-export const Statistics = ({ options, total, positivePercentage }) => {
+export const Statistics = ({ options, total, positivePercentage }) => {  // options - об'єкт
         const entries = Object.entries(options); // масив масивів
         return (
             <> 
@@ -23,11 +18,11 @@ export const Statistics = ({ options, total, positivePercentage }) => {
                 <List>
                     <Item>
                         <Property>total:</Property>
-                        <Numbers>{total()}</Numbers>
+                        <Numbers>{total}</Numbers>
                     </Item>
                     <Item>
                         <Property>positiveFeedback:</Property>
-                        <Numbers>{positivePercentage()}</Numbers>
+                        <Numbers>{positivePercentage}</Numbers>
                     </Item>
                 </List>
             </>
@@ -36,6 +31,6 @@ export const Statistics = ({ options, total, positivePercentage }) => {
 
 Statistics.propTypes = {
     options: PropTypes.object.isRequired,
-    total: PropTypes.func.isRequired,
-    positivePercentage: PropTypes.func.isRequired,
+    total: PropTypes.number.isRequired,
+    positivePercentage: PropTypes.string.isRequired,
 };

@@ -1,9 +1,4 @@
-// import { Component } from "react";          //  для класів
 import PropTypes from 'prop-types';
-
-// export class Section extends Component {          //  для класів
-//     render() {
-//         const { title, children } = this.props;
 
 
 export const Section = ({ title, children }) => {

@@ -1,12 +1,5 @@
-// import { Component } from "react";                     // для класів
 import PropTypes from 'prop-types';
 import { ButtonsList, Button } from "./styled";
-
-
-// export class FeedbackOptions extends Component {       // для класів
-//     render() {
-//          const { options, onLeaveFeedback } = this.props;
-
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
         return (
@@ -17,7 +10,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
                             type='button' 
                             name={option} 
                             $mode={option} 
-                            onClick={() => onLeaveFeedback(option)}>
+                            onClick={() => onLeaveFeedback(option)}> {/* good/neutral/bad */}
                             {option}
                         </Button>
                     </li>                        
